@@ -59,7 +59,10 @@ int main()
             for(int a = 0; a < i; a++)
                 if (hashh(persons[a]) == x) {
                     printf("Je tu: %s", persons[a]);
-                    break;
+                }
+                else 
+                {
+                    printf("Nikdo takovy tu neni");
                 }
             getchar();
             break;
