@@ -53,9 +53,10 @@ int main()
         case '3':
             printf("Hledane jmeno: ");
             scanf("%s", search);
+            int x = hashh(search);
             while (getchar() != '\n');
             for(int a = 0; a < i; a++)
-                if (hashh(persons[a]) == hashh(search)) {
+                if (hashh(persons[a]) == x) {
                     printf("Je tu: %s", persons[a]);
                     break;
                 }
