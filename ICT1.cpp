@@ -27,6 +27,7 @@ int main()
     char menu;
     char persons[10][10];
     int i = 0;
+    int x;
     char search[10];
     bool run = true;
     while (run) {
@@ -53,7 +54,7 @@ int main()
         case '3':
             printf("Hledane jmeno: ");
             scanf("%s", search);
-            int x = hashh(search);
+            x = hashh(search);
             while (getchar() != '\n');
             for(int a = 0; a < i; a++)
                 if (hashh(persons[a]) == x) {
