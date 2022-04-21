@@ -34,24 +34,24 @@ int main()
         printf("Year: %d\n", year);
         printf("Company Name: %s\n", name);
         printf("Owner: %s\n", owner);
-        printf("1 Rename \t 2 Add person \t 3 Find person \t 4 Change year \t 5 Exit");
+        printf("1 Rename \t 2 Add person \t 3 Find person \t 4 Change year \t 5 Exit\n");
         menu = tolower(getchar());
         while (getchar() != '\n');
         switch (menu) {
         case '1':
-            printf("Rename:");
+            printf("Rename: ");
             scanf("%s",name);
             while (getchar() != '\n');
-            printf("Company Name: %s\n", name);
-            printf("Owner: %s\n", owner);
             break;
         case '2':
+            printf("Pridejte jmeno: "); // "Jarek" a "Miroslav" mají shodu
             scanf("%s", persons[i]);
             printf("%d", hashh(persons[i]));
             while (getchar() != '\n');
             i++;
             break;
         case '3':
+            printf("Hledane jmeno: ");
             scanf("%s", search);
             while (getchar() != '\n');
             for(int a = 0; a < i; a++)
@@ -61,7 +61,7 @@ int main()
                 }
             break;
         case '4':
-            printf("Set year:");
+            printf("Set year: ");
             scanf_s("%d", &year);
             while (getchar() != '\n');
             break;
