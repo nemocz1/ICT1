@@ -24,18 +24,20 @@ int main()
     char owner[16] = "Pepa";
     char name[16] = "BankBanka";
     int year = 2000;
-    int menu = 0;
+    char menu;
     bool run = true;
     while (run) {
+        system("cls");
         printf("Year: %d\n", year);
         printf("Company Name: %s\n", name);
         printf("Owner: %s\n", owner);
         printf("1 Rename \t 2 Add person \t 3 Find person \t 4 Change year \t 5 Exit");
-        scanf("%d", menu);
+        menu = tolower(getchar());
         while (getchar() != '\n');
         switch (menu) {
         case 1:
             printf("Rename:");
+            while (getchar() != '\n');
             scanf("%s", &name);
             while (getchar() != '\n');
             printf("Company Name: %s\n", name);
@@ -45,7 +47,10 @@ int main()
             break;
         case 3:
             break;
-        case 4:
+        case '4':
+
+            scanf_s("%d", &year);
+            while (getchar() != '\n');
             break;
         case 5:
             run = false;
