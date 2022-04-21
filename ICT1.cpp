@@ -25,6 +25,9 @@ int main()
     char name[16] = "BankBanka";
     int year = 2000;
     char menu;
+    char persons[10][10];
+    int i = 0;
+    char search[10];
     bool run = true;
     while (run) {
         system("cls");
@@ -42,18 +45,30 @@ int main()
             printf("Company Name: %s\n", name);
             printf("Owner: %s\n", owner);
             break;
-        case 2:
+        case '2':
+            scanf("%s", persons[i]);
+            printf("%d", hashh(persons[i]));
+            while (getchar() != '\n');
+            i++;
             break;
-        case 3:
+        case '3':
+            scanf("%s", search);
+            while (getchar() != '\n');
+            for(int a = 0; a < i; a++)
+                if (hashh(persons[a]) == hashh(search)) {
+                    printf("Je tu: %s", persons[a]);
+                    break;
+                }
             break;
         case '4':
-
+            printf("Set year:");
             scanf_s("%d", &year);
             while (getchar() != '\n');
             break;
-        case 5:
+        case '5':
             run = false;
             break;
         }
     }
+    return 1;
 }
