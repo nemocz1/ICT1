@@ -56,13 +56,10 @@ int main()
             scanf("%s", search);
             x = hashh(search);
             while (getchar() != '\n');
-            for(int a = 0; a < i; a++)
+            for(int a = i-1; a >= 0; a--)
                 if (hashh(persons[a]) == x) {
                     printf("Je tu: %s", persons[a]);
-                }
-                else 
-                {
-                    printf("Nikdo takovy tu neni");
+                    break;
                 }
             getchar();
             break;
