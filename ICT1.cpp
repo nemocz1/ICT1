@@ -61,6 +61,7 @@ int main()
                     printf("Je tu: %s", persons[a]);
                     break;
                 }
+            getchar();
             break;
         case '4':
             printf("Set year: ");
