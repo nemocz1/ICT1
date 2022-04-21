@@ -35,10 +35,9 @@ int main()
         menu = tolower(getchar());
         while (getchar() != '\n');
         switch (menu) {
-        case 1:
+        case '1':
             printf("Rename:");
-            while (getchar() != '\n');
-            scanf("%s", &name);
+            scanf("%s",name);
             while (getchar() != '\n');
             printf("Company Name: %s\n", name);
             printf("Owner: %s\n", owner);
